@@ -7,9 +7,13 @@ const {
   deleteDirector
 } = require("../controllers/directorController");
 
-router.get("/", getDirectores);
-router.post("/", createDirector);
-router.put("/:id", updateDirector);
-router.delete("/:id", deleteDirector);
+const authMiddleware = require("../middlewares/authMiddleware");
+const roleMiddleware = require("../middlewares/roleMiddleware");
+
+router.get("/", authMiddleware, roleMiddleware("administrador"), getDirectores);
+router.post("/", authMiddleware, roleMiddleware("administrador"), createDirector);
+router.put("/:id", authMiddleware, roleMiddleware("administrador"), updateDirector);
+router.delete("/:id", authMiddleware, roleMiddleware("administrador"), deleteDirector);
+
 
 module.exports = router;
