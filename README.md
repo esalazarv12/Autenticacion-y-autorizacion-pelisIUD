@@ -10,10 +10,10 @@ y por ultimo ejecutar la aplicacion con: npm run dev
 #Listo ya puedes realizar las pruebas con postman haciendo peticiones a los siguientes rutas:
 
 http://localhost:4000/api/peliculas
-                          directores
-                          generos
-                          tipos
-                          productoras
-                          usuarios  //para ver los usuarios registrado
-                          usuarios/login  // para crear un nuevo usuario
+http://localhost:4000/api/directores
+http://localhost:4000/api/generos
+http://localhost:4000/api/tipos
+http://localhost:4000/api/productoras
+http://localhost:4000/api/usuarios  //para ver los usuarios registrado
+http://localhost:4000/api/usuarios/login  // para crear un nuevo usuario
                           
