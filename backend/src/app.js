@@ -31,9 +31,6 @@ app.use("/api/productoras", productoraRoutes);
 const userRoutes = require("./routes/userRoutes");
 app.use("/api/usuarios", userRoutes);
 
-// Eliminado: NO usar este router
-// const authRoutes = require("./routes/authRoutes");
-// app.use("/api/auth", authRoutes);
 
 // Ruta raíz
 app.get("/", (req, res) => {
